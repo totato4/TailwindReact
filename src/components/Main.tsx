@@ -59,17 +59,12 @@ const Main = () => {
         <div
           className="grid align-middle justify-center
         md:gap-x-[3.59712230216%]  md:grid-cols-colHelloContainer 
-        gap-x-[21px] grid-cols-colHelloContainer3
-        "
-          // gap-x-[5.07246376812%] mx-[5.07246376812%] grid-cols-colHelloContainerMD
+        gap-x-[21px] grid-cols-colHelloContainer3"
         >
           <div
             className="grid
           md:gap-y-[8.94308943089%] md:grid-rows-rowHelloLeft
-          gap-y-[22px] grid-rows-rowHelloLeft2
-          
-          "
-            // gap-y-[5.31400966184%] grid-rows-rowHelloLeftMD
+          gap-y-[22px] grid-rows-rowHelloLeft2"
           >
             <div className="  ">
               <img
@@ -252,60 +247,3 @@ const Main = () => {
 };
 
 export default Main;
-
-// fontSize: {
-//         head1: ["18px", "21.6px"],
-//         footer1: ["24px", "30.19px"],
-//         footer2: ["18px", "22.64px"],
-//         headBefa: ["24px", "28.8px"],
-//       },
-
-// {/* <div className="max-h-[720px]">
-//   <div className="flex ">
-//     <div className=" flex font-Poppins  text-white text-[40px] leading-[44.12px] xl:text-[80px] lg:text-[65px] md:text-[52px] md:leading-[88.24px]   md:mr-[10px]  mx-7 z-10">
-//       <svg
-//         width="245"
-//         height="56"
-//         viewBox="0 0 245 56"
-//         fill="none"
-//         xmlns="http://www.w3.org/2000/svg"
-//       >
-//         <rect width="245" height="56" fill="#B91616" />
-//       </svg>
-
-//       {/* <div className=" mr-[20px] h-[30px] mt-[8px] w-[245px] xl:mt-[14px] xl:h-[60px] xl:w-[245px] lg:mt-[22px] lg:h-[45px] md:h-[40px] md:mt-[22px] bg-[#B91616] z-10"></div> */}
-//       <span>
-//         I, <span className="text-[#B91616]">Befa</span>, put mine artistic
-//         abstracts Works before. These art pictures show the whole spectrum of my
-//         inner joy, spiritual Mood, immeasurable Joy for life.
-//       </span>
-//     </div>
-//   </div>
-
-//   <div className=" pt-[96px] hidden ">
-//     <div className="z-10 absolute top-[112px] overflow-hidden md:w-[12.7604166667%] w-[22px] h-[28px]  ">
-//       {/* <div className=" mr-[20px] h-[56px] w-[245px] bg-[#B91616]"></div> */}
-//       <svg
-//         width="245"
-//         height="56"
-//         viewBox="0 0 245 56"
-//         fill="none"
-//         xmlns="http://www.w3.org/2000/svg"
-//       >
-//         <rect width="245" height="56" fill="#B91616" />
-//       </svg>
-//     </div>
-
-//     <div className="font-Poppins  text-white text-[40px] leading-[44.12px] xl:text-[80px] lg:text-[65px] md:text-[52px] md:leading-[88.24px]  md:ml-[13.8020833333%] md:mr-[10px] mx-7 z-10">
-//       I, <span className="text-[#B91616]">Befa</span>, put mine artistic
-//       abstracts Works before. These art pictures show the whole spectrum of my
-//       inner joy, spiritual Mood, immeasurable Joy for life.
-//     </div>
-//     <div className="h-full">
-//       <img className="h-full object-cover" src="img/img-0.jpg" alt="" />
-//     </div>
-//   </div>
-//   {/* <div className="absolute right-0 top-0 z-0 max-[302px] h-[630px] md:h-[720px] md:w-[985px] ">
-//           <img className="h-full object-cover" src="img/img-0.jpg" alt="" />
-//         </div> */}
-// </div>; */}
