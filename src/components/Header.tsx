@@ -1,5 +1,3 @@
-import React from "react";
-
 const Header = () => {
   // font-family: 'Black Han Sans', sans-serif;
   // font-family: 'Poppins', sans-serif;

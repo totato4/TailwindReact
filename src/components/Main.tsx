@@ -1,32 +1,82 @@
-import React from "react";
+import { useState } from "react";
+import Item from "./Item";
+import { Iarray } from "./../types/types";
+
+const imgArray = [
+  {
+    img: "img/img-4.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-5.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-6.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-7.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-8.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-9.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-10.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+  {
+    img: "img/img-11.jpg",
+    name: "Corrida",
+    title: "100#100 Acryl",
+    subtitle:
+      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
+  },
+];
 
 const Main = () => {
-  const imgArray = [
-    "img/img-4.jpg",
-    "img/img-5.jpg",
-    "img/img-6.jpg",
-    "img/img-7.jpg",
-    "img/img-8.jpg",
-    "img/img-9.jpg",
-    "img/img-10.jpg",
-    "img/img-11.jpg",
-  ];
+  const array: Iarray[] = imgArray.slice(0, 4);
 
-  const array: string[] = imgArray.slice(0, 4);
+  const [imgArrayState, setImg] = useState(array);
 
-  const [imgArrayState, setImg] = React.useState(array);
-
-  const [show, setShow] = React.useState(false);
+  const [show, setShow] = useState(false);
 
   const toHide = () => {
-    const array: string[] = imgArray.slice(0, 4);
+    const array: Iarray[] = imgArray.slice(0, 4);
     setShow(false);
     setImg(array);
     console.log(imgArrayState);
   };
 
   const toShow = () => {
-    const array2: string[] = imgArray;
+    const array2: Iarray[] = imgArray;
     setShow(true);
     setImg(array2);
     console.log(imgArrayState);
@@ -130,17 +180,9 @@ const Main = () => {
       </div>
       <div className=" container md:mx-auto max-w-contWidth ">
         <div className=" grid md:grid-cols-colPortfolio   md:gap-mainImg1   md:pt-[35px]  grid-cols-1  gap-y-8 pt-6 mx-[21px]">
-          {imgArrayState.map((obj: any, index: number) =>
-            index % 2 == 0 ? (
-              <div className="max-w-[670px] md:mt-[-35px] mx-auto" key={index}>
-                <img className="w-full" src={obj} alt="image2" />
-              </div>
-            ) : (
-              <div className="max-w-[670px] mx-auto" key={index}>
-                <img className="w-full" src={obj} alt="image2" />
-              </div>
-            )
-          )}
+          {imgArrayState.map((obj: any, index: number) => (
+            <Item key={index} {...obj} index={index} />
+          ))}
         </div>
       </div>
       {show ? (
