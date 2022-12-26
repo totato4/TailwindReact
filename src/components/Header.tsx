@@ -1,7 +1,4 @@
 const Header = () => {
-  // font-family: 'Black Han Sans', sans-serif;
-  // font-family: 'Poppins', sans-serif;
-
   return (
     <header className="bg-headRed max-w-full z-50">
       <nav className="md:hidden">

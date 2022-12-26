@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Item from "./Item";
 import { Iarray } from "./../types/types";
 
@@ -79,9 +79,25 @@ const Main = () => {
     const array2: Iarray[] = imgArray;
     setShow(true);
     setImg(array2);
-    console.log(imgArrayState);
-    console.log(show);
   };
+
+  // ScrollTo Logic
+  const imagesEndRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    imagesEndRef.current?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }, [imgArrayState]);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
+
+  //
 
   return (
     <main
@@ -162,7 +178,10 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className="container flex justify-end self-center ml-auto mt-[126px] mb-[40px]">
+      <div
+        className="container flex justify-end self-center ml-auto mt-[126px] mb-[40px]"
+        ref={imagesEndRef}
+      >
         <p className="text-white text-base md:text-[24px] md:leading-[1.8869rem]">
           My portfolio
         </p>
@@ -178,7 +197,8 @@ const Main = () => {
           </svg>
         </div>
       </div>
-      <div className=" container md:mx-auto max-w-contWidth ">
+      <div className=" relative container md:mx-auto max-w-contWidth ">
+        <div className="absolute top-[-100px]"></div>
         <div className=" grid md:grid-cols-colPortfolio   md:gap-mainImg1   md:pt-[35px]  grid-cols-1  gap-y-8 pt-6 mx-[21px]">
           {imgArrayState.map((obj: any, index: number) => (
             <Item key={index} {...obj} index={index} />
