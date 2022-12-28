@@ -109,16 +109,16 @@ const Main = () => {
       <div className="container mx-auto max-w-contWidth relative md:px-[10px] ">
         <div className="absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] z-2 text-center text-white font-BlackHanSans">
           <div className="mt-auto mb-auto">
-            <div className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-sm text-xs ">
+            <h3 className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-sm text-xs select-none">
               Hello, i am
-            </div>
-            <div
+            </h3>
+            <h1
               className="  
-            xl:text-[220px] lg:text-[200px] md:text-[150px] sm:text-[60px] text-[50px]      
+            xl:text-[220px] lg:text-[200px] md:text-[150px] sm:text-[60px] text-[50px]   select-none   
             "
             >
               BefaArt.
-            </div>
+            </h1>
           </div>
         </div>
 
@@ -182,7 +182,7 @@ const Main = () => {
         className="container flex justify-end self-center ml-auto mt-[126px] mb-[40px]"
         ref={imagesEndRef}
       >
-        <p className="text-white text-base md:text-[24px] md:leading-[1.8869rem]">
+        <p className="text-white text-base md:text-[24px] md:leading-[1.8869rem] whitespace-nowrap select-none">
           My portfolio
         </p>
         <div className=" ml-[22px]  my-auto md:w-auto w-16 overflow-x-hidden">
@@ -207,7 +207,7 @@ const Main = () => {
       </div>
       {show ? (
         <div onClick={() => toHide()} className="w-full flex justify-center">
-          <button className=" hover:bg-white hover:text-black hover:border-black hover:rounded-md w-[225px] duration-100 h-[65px] text-white border-solid border-white border-[1px] text-center mt-[58px] mb-[125px] place-content-center">
+          <button className=" select-none cursor-pointer hover:bg-white hover:text-black hover:border-black hover:rounded-md w-[225px] duration-100 h-[65px] text-white border-solid border-white border-[1px] text-center mt-[58px] mb-[125px] place-content-center">
             Hide works
           </button>
         </div>
@@ -215,7 +215,7 @@ const Main = () => {
         <div className="w-full flex justify-center">
           <button
             onClick={() => toShow()}
-            className=" hover:bg-white hover:text-black hover:border-black hover:rounded-md w-[225px] duration-100 h-[65px] text-white border-solid border-white border-[1px] text-center mt-[58px] mb-[125px] place-content-center"
+            className=" select-none cursor-pointer hover:bg-white hover:text-black hover:border-black hover:rounded-md w-[225px] duration-100 h-[65px] text-white border-solid border-white border-[1px] text-center mt-[58px] mb-[125px] place-content-center"
           >
             Load more
           </button>
@@ -234,7 +234,7 @@ const Main = () => {
             <rect width="245" height="1" fill="white" />
           </svg>
         </div>
-        <div className="text-white text-sm md:text-[24px] md:leading-[1.8869rem]">
+        <div className="text-white text-sm md:text-[24px] md:leading-[1.8869rem] whitespace-nowrap select-none">
           About me
         </div>
       </div>
@@ -279,7 +279,7 @@ const Main = () => {
             </div>
           </div>
           <span
-            className="text-white font-Poppins align-middle    z-20
+            className="text-white font-Poppins align-middle select-none  z-20
           xl:pt-[96px] xl:text-[80px] xl:w-[1150px]   pt-[127px]
           lg:pt-[77px] lg:text-[65px]
           md:text-[52px] md:w-auto md:pt-[55px] md:leading-[70px]  

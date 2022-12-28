@@ -1,10 +1,31 @@
+import { useState } from "react";
+import { MenuItems } from "../types/types";
+import MobMenu from "./MobMenu";
+
+const items: MenuItems = [
+  { value: "Home", href: "#" },
+  { value: "My portfolio", href: "#" },
+  { value: "About me", href: "#" },
+  { value: "Contacts", href: "#" },
+];
+
 const Header = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const OpenBtn = () => {
+    setShowMenu(true);
+  };
+
+  const CloseBtn = () => {
+    setShowMenu(false);
+  };
+
   return (
     <header className="bg-headRed max-w-full z-50">
       <nav className="md:hidden">
         <div className="flex justify-between p-5 h-[60px] fixed top-0 w-full bg-headRed z-50">
-          <button className="flex z-60 ">
-            <p className="text-white text-[16px] leading-[19.2px] font-black">
+          <button className="flex z-50 ">
+            <p className="text-white text-[16px] leading-[19.2px] font-black select-none">
               BefaArt
             </p>
             <svg
@@ -17,8 +38,42 @@ const Header = () => {
               <circle cx="2.5" cy="2.5" r="2.5" fill="white" />
             </svg>
           </button>
-          <button className="z-50">
-            <svg
+
+          {showMenu ? (
+            <button className="cursor-pointer" onClick={() => CloseBtn()}>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="1.73894"
+                  height="20.8673"
+                  rx="0.86947"
+                  transform="matrix(0.707381 -0.706833 0.707381 0.706833 0 1.25049)"
+                  fill="white"
+                />
+                <rect
+                  width="1.73894"
+                  height="20.8673"
+                  rx="0.869471"
+                  transform="matrix(-0.707782 -0.706431 -0.707782 0.706431 16 1.22845)"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          ) : (
+            <button
+              onClick={() => OpenBtn()}
+              className="z-50 w-[20px]  color:white h-4  relative cursor-pointer
+          after:content[''] after:top-0 after:right-0 after:absolute after:w-[7.11px] after:border:white after:border-[1.11px] after:rounded-lg after:bg-white
+          before:content[''] before:top-[12.88px] before:right-0 before:absolute before:w-[12.44px] before:border-white  before:border-[1.11px] before:rounded-lg before:bg-white
+          "
+            >
+              <span className="top-[6.44px] right-0 absolute w-[15.56px] border-white border-[1.11px] rounded-lg bg-white " />
+              {/* <svg
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -47,14 +102,16 @@ const Header = () => {
                 rx="1.11111"
                 fill="white"
               />
-            </svg>
-          </button>
+            </svg> */}
+            </button>
+          )}
         </div>
+        <MobMenu items={items} showMenu={showMenu} />
       </nav>
       <nav className="md:block hidden">
         <ul
           className=" container mx-auto max-w-contWidth flex flex-row justify-center h-24 relative
-        xl:text-[18px] xl:leading-[1.35rem] lg:text-base md:text-sm text-xs xl:gap-20 lg:gap-14 md:gap-12 gap-10 font-Poppins items-center font-medium "
+        xl:text-[18px] xl:leading-[1.35rem] lg:text-base md:text-sm text-xs xl:gap-20 lg:gap-14 md:gap-12 gap-10 font-Poppins items-center font-medium select-none"
         >
           <li className="     text-whiteText">Home</li>
           <li className="     text-whiteText">My portfolio</li>
@@ -72,7 +129,7 @@ const Header = () => {
           </li>
           <li className="     text-white">About</li>
           <li className="     text-white">Contacts</li>
-          <button className=" text-center justify-center     flex  absolute xl:right-[50px] lg:right-[30px] right-[15px]  text-white">
+          <button className=" text-center justify-center     flex  absolute xl:right-[50px] lg:right-[30px] right-[15px] cursor-pointer  text-white">
             <div className="mr-[9px]">ENG</div>
             <div className="mt-auto mb-auto">
               <svg

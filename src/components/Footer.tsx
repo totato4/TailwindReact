@@ -1,11 +1,23 @@
 const Footer = () => {
+  // const ScrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     left: 0,
+  //     behavior: "smooth",
+  //   });
+  // };
+
+  // useEffect(() => {
+
+  // }, []);
+
   return (
-    <footer className="bg-headRed  max-w-full">
-      <div className=" text-white mx-5  ">
+    <footer className="bg-headRed   max-w-full">
+      <div className=" text-white px-5 mx-auto max-w-[1390px]  ">
         <nav className="">
           <ul className="flex justify-between items-center flex-wrap xl:h-[145px] lg:h-[100px] md:h-[150px] sm:h-[150px] h-[150px] ">
             <li
-              className="md:order-1
+              className="md:order-1 select-none
             xl:text-[24px] xl:leading-[1.8869rem] lg:text-xl md:text-lg text-base leading-[12.58px] font-medium font-BlackHanSans
             "
             >
@@ -16,12 +28,30 @@ const Footer = () => {
             font-medium font-Poppins xl:text-[18px] xl:leading-[1.35rem] lg:text-base  md:text-sm text-xs
             "
             >
-              <li>Phone: +015207940490</li>
-              <li>Email: befaart@gmx.de</li>
-              <li>Instagram: @befaart</li>
+              <li>
+                <span className="select-none">Phone: </span>
+                <a href="">+015207940490</a>
+              </li>
+              <li>
+                <span className="select-none">Email: </span>
+                <a href="">befaart@gmx.de</a>
+              </li>
+              <li>
+                <span className="select-none">VK: </span>
+                <a href="">@befaart</a>
+              </li>
             </ul>
 
-            <li className="flex md:order-3 ">
+            <li
+              onClick={() =>
+                window.scrollTo({
+                  top: 0,
+                  left: 0,
+                  behavior: "smooth",
+                })
+              }
+              className="flex md:order-3 select-none cursor-pointer"
+            >
               <span
                 className="mr-3 
               xl:text-[18px] xl:leading-[1.415rem] lg:text-base md:text-base text-sm font-medium font-BlackHanSans

@@ -4,3 +4,9 @@ export interface Iarray {
   title: string;
   subtitle: string;
 }
+
+export type MobMenuItems = {
+  value: string, href:string
+}
+
+export type MenuItems = MobMenuItems[]
