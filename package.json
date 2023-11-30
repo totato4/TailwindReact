@@ -2,6 +2,7 @@
   "name": "befa-art",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://totato4.github.io/TailwindReact",
   
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
