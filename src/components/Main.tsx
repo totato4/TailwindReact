@@ -1,65 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import Item from "./Item";
 import { Iarray } from "./../types/types";
-
-const imgArray = [
-  {
-    img: "img/img-4.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-5.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-6.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-7.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-8.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-9.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-10.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-  {
-    img: "img/img-11.jpg",
-    name: "Corrida",
-    title: "100#100 Acryl",
-    subtitle:
-      "I painted this picture experiencing love,passion, pain for my Beloved, in the picture below in the right corner there is an incision, a wound from which blood flows, like in Corrida",
-  },
-];
+import { imgArray } from "../assets/static";
+//  "homepage": "https://totato4.github.io/TailwindReact",
 
 const Main = () => {
   const array: Iarray[] = imgArray.slice(0, 4);
@@ -110,7 +53,7 @@ const Main = () => {
         <div className="absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] z-2 text-center text-white font-BlackHanSans">
           <div className="mt-auto mb-auto">
             <h3 className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-sm text-xs select-none">
-              Hello, i am
+              Hello, i am Sanal
             </h3>
             <h1
               className="  
@@ -132,7 +75,7 @@ const Main = () => {
           md:gap-y-[8.94308943089%] md:grid-rows-rowHelloLeft
           gap-y-[22px] grid-rows-rowHelloLeft2"
           >
-            <div className="  ">
+            <div className=" bg-white ">
               <img
                 className="md:block hidden  "
                 src="img/img-1.jpg"
