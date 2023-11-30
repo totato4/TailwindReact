@@ -53,7 +53,7 @@ const Main = () => {
         <div className="absolute top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%] z-2 text-center text-white font-BlackHanSans">
           <div className="mt-auto mb-auto">
             <h3 className="xl:text-4xl lg:text-3xl md:text-2xl sm:text-sm text-xs select-none">
-              Hello, i am Sanal
+              Hello, i am
             </h3>
             <h1
               className="  
